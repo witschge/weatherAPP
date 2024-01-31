@@ -1,6 +1,6 @@
 import getLocation from "./components/Location";
 
-const API_KEY = "26c27979a4b335b772266d7f47a6040e";
+const API_KEY = process.env.REACT_APP_OPENWEATHERMAP_API_KEY;
 
 export const getWeatherData = async () => {
   try {
