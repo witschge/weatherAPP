@@ -4,6 +4,8 @@ const getLocation = async (userAgreed) => {
       const position = await getCurrentPosition();
       const { latitude, longitude } = position.coords;
 
+      //console.log("Dobijene koordinate:", latitude, longitude);
+
       return {
         latitude,
         longitude,

@@ -1,13 +1,18 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import WeatherShow from "./components/WeatherShow";
+import { getWeatherData } from "./api";
 
 function App() {
-  const handleYesClicked = () => {
-    console.log("Yes was clicked!!!");
+  const handleYesClicked = async () => {
+    //console.log("Yes was clicked!!!");
+    const weatherData = await getWeatherData();
+    //console.log("Weather data:", weatherData);
   };
-  const handleNoClicked = () => {
-    console.log("No was clicked!!!");
+  const handleNoClicked = async () => {
+    //console.log("No was clicked!!!");
+    const weatherData = await getWeatherData();
+    //console.log("Weather data:", weatherData);
   };
 
   return (
