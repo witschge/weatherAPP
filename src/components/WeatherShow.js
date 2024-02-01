@@ -2,16 +2,21 @@ import React from "react";
 
 const WeatherShow = ({ weatherData }) => {
   if (!weatherData) {
-    return <div>No weather data available</div>;
+    return <div>Nema dostupnih vremenskih podataka.</div>;
   }
 
-  const { temperature, description } = weatherData;
+  const { temperature, description, humidity, city, icon } = weatherData;
 
   return (
     <div>
-      <p>Prikazujemo vremenske podatke:</p>
-      <p>Temperature: {temperature} °C</p>
-      <p>Description: {description}</p>
+      <h2>Lokacija: {city}</h2>
+      <p>Temperatura: {temperature} °C</p>
+      <p>Opis: {description}</p>
+      <p>Vlaznost: {humidity} %</p>
+      <img
+        src={`http://openweathermap.org/img/w/${icon}.png`}
+        alt="Weather icon"
+      />
     </div>
   );
 };
