@@ -35,6 +35,17 @@ function App() {
       <button onClick={handleNoClicked}>Ne</button>
 
       <WeatherShow weatherData={weatherData} />
+      <div
+        style={{
+          marginTop: "20px",
+          textAlign: "center",
+          position: "fixed",
+          bottom: "0",
+          width: "100%",
+        }}
+      >
+        Made with ❤️ by witschge
+      </div>
     </div>
   );
 }
